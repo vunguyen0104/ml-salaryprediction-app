@@ -63,7 +63,8 @@ def show_explore_page():
     data = df["Country"].value_counts()
 
     fig1, ax1 = plt.subplots(1,1, figsize=(12, 7))
-    ax1.pie(data, labels=data.index, autopct="%1.1f%%", shadow=True, startangle=90)
+    #ax1.pie(data, labels=data.index, autopct="%1.1f%%", shadow=True, startangle=90)
+    ax1.pie(data, labels=data.index, autopct="%.0f%%", shadow=False, startangle=0, textprops={'size': 'smaller'})
     ax1.axis("equal")
 
     st.write("""
